@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+  <head>
+    <!-- the standard p5 drawing and animation library -->
+    <script src="../p5/p5.min.js"></script>
+
+    <!-- the standard p5 sound library
+         note: this library will fail if not loaded over
+         a secure connection (https) or on your localhost) -->
+    <script src="../p5/addons/p5.sound.min.js"></script>
+    <!-- your custom sketch file -->
+    <script src="sketch.js"></script>
+    <style>
+      body {
+        background-color: #e6fff2;
+      }
+      #settings {
+        border: 1px;
+        text-align: center;
+      }
+
+    </style>
+  </head>
+  <body>
+    <h1>Assignment 03</h1>
+    <h2> Soso Shopping in Soho </h2>
+    <h3> Inspiration: </h3>
+      <p>Hi, I am Sonam, or in this case 'Soso', a current senior at NYU. As someone who frequently (.. very frequently) visits Soho to shop, I came up with the game Soso Shopping in Soho! Zara, (my favorite store) is known for its fast fashion and engagement with new trends. Because of the Covid-19 situation, Zara has had stock buildup and recently a lot of sales. In light of Zara's situation and constant turnaround of styles, I have spent a lot of time in Soho shopping... the idea of Soso Shopping in Soho was born. </p>
+    <h3> Objective: </h3>
+      <p>The goal of the game is to have the user navigate the streets of Soho and collect items so the total price of Soso's bag meets the goal budget! You win, if you collect the goal budget!</p>
+    <h3> Instructions: </h3>
+      <ol>
+        <li>First select the level of difficulty you want to play at</li>
+          <ul>
+            <li>Note that as you pick a harder level of difficulty, both the goal budget and range of speeds for the obstacles increase.</li>
+          </ul>
+        <li>Click Start Game</li>
+        <li>Once the game starts use both the D key (for rightwards movement) and A key (for leftwards movement) to move horizontally and the W key to jump. If you accidentally run into an obstacle to avoid, the game will end!</li>
+          <ul>
+            <li>For objects to avoid use the up arrow to jump over them.</li>
+            <li>For clothing objects simply let Soso run into them to accumulate the points!</li>
+          </ul>
+      </ol>
+    <p>Objects to Avoid (Obstacles):</p>
+    <img src = "banana.png" alt = "banana">
+    <img src = "dog.png" alt = "dog">
+    <img src = "fries.png" alt = "fries">
+    <img src = "trash.png" alt = "trash">
+    <img src = "pigeon.png" alt = "pigeon">
+    <p>Objects to Collect:</p>
+    <img src = "tshirt.png" alt = "banana">
+    <img src = "shoes.png" alt = "dog">
+    <img src = "purse.png" alt = "fries">
+    <img src = "sweater.png" alt = "trash">   
+    <img src = "shorts.png" alt = "pigeon"> 
+    <h3> Scoring:</h3>
+      <p>Each clothing item collected is worth $50</p>
+    <div id = "settings">
+      <h3>Settings</h3>
+      <form>
+        Difficulty: 
+        <select id = "difficulty" name = "difficulty">
+          <option value = "easy">Easy</option>
+          <option value = "medium">Medium</option>
+          <option value = "hard">Hard</option>
+        </select>
+        <div>
+        <br>
+        <button id = "gameStart" name= "gameStart" onclick="startGame(); return false;">Start Game</button>
+        </div>
+      </form>
+    <br>
+    <button id = "pauseButton" onclick="handlePause();">Pause Game</button>
+    </div>
+    <br>
+  </body>
+</html>
